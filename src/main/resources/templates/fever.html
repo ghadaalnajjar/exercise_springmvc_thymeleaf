@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>temperature</title>
+</head>
+<body>
+<h1>body temperature</h1>
+
+<br/>
+<form th:action="@{/test/add}" method="post">
+      Name: <input th:type="text" th:field="*{name}"/>
+    <br/>
+      Id: <input th:type="text" th:field="*{id}"/>
+    <br/>
+      fever: <input th:type="text" th:field="*{fever}"/>
+    <br/>
+      Hyperthermia: <input th:type="text" th:field="*{hyperthermia}"/>
+    <br/>
+      bodyTemperature: <input th:type="text" th:field="*{bodyTemperature}"/>
+    <td><input type="submit" value="Submit" /></td>
+    </form>
+
+    <div th:insert="footer :: footer"></div>
+</form>
+</body>
+</html>
